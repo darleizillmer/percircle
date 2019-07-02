@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script type="text/javascript" src="https://thodorisbais.github.io/percircle/dist/js/percircle.js"></script>
+  <link rel="stylesheet" href="https://thodorisbais.github.io/percircle/dist/css/percircle.css">
+</head>
+<body>
+<div id="fif" class="pink big center"></div>
+<div class="col" style="text-align:center"><button id="pular">Pular para 50</button></div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#fif").percircle({percent: 30,text: "30"});
+        $('#pular').click(function(e){
+            e.preventDefault();
+            mudar();
+        });
+    });
+    function mudar(){
+        $("#fif").percircle({
+            text: "50",
+            percent: 50,
+            progressBarColor: "#1ec0b0"
+        });
+    }
+</script>
+</html>
